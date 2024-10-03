@@ -108,4 +108,16 @@ async def handle_about_callback(bot: Client, query: CallbackQuery):
 # Handle Home button callback
 @Client.on_callback_query(filters.regex("home"))
 async def handle_home_callback(bot: Client, query: CallbackQuery):
-    await start(bot, query.message)  # Call the start function to display the home menu again
+    # Recreate the welcome message for the home menu
+    me2 = (await bot.get_me()).mention
+    await query.message.reply(
+        text=f"""Hᴇʏ {query.from_user.mention}🦋,
+
+Tʜɪs ɪs {me2},
+Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
+ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
+
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ʙᴀʀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDEDKING8) !""",
+        reply_markup=InlineKeyboardMarkup(Data.buttons),  # Display the full set of buttons
+        disable_web_page_preview=True,
+    )
