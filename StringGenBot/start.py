@@ -1,15 +1,13 @@
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 
 class Data:
-    generate_single_button = [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="/generate")]
+    generate_single_button = [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
 
     home_buttons = [
         generate_single_button,
         [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")]
     ]
-
-    generate_button = [generate_single_button]
 
     buttons = [
         generate_single_button,
@@ -36,26 +34,6 @@ You can use me to generate Pyrogram (even version 2) and Telethon string session
 By @ELUpdates
     """
 
-# Start command using the Data class
-@Client.on_message(filters.command("start") & filters.private)
-async def start(bot: Client, msg: Message):
-    me2 = (await bot.get_me()).mention
-    await bot.send_message(
-        chat_id=msg.chat.id,
-        text=Data.START.format(msg.from_user.mention, me2),
-        reply_markup=InlineKeyboardMarkup(
-            [
-                Data.generate_single_button,  # Start Generating Session button
-                [
-                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
-                ]
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
-
-
     HELP = """
 ✨ **Available Commands** ✨
 
@@ -65,7 +43,7 @@ async def start(bot: Client, msg: Message):
 /generate - Generate Session
 /cancel - Cancel the process
 /restart - Cancel the process
-"""
+    """
 
     ABOUT = """
 **About This Bot** 
@@ -81,17 +59,26 @@ Language : [Python](https://www.python.org)
 Developer : @CoderEL
     """
 
-# Start command
-@app.on_message(filters.command("start") & filters.private)
-async def start_command(bot: Client, msg: Message):
-    bot_info = await bot.get_me()  # Get bot info
+# Start command using the Data class
+@Client.on_message(filters.command("start") & filters.private)
+async def start(bot: Client, msg: Message):
+    me2 = (await bot.get_me()).mention
     await msg.reply(
-        text=Data.START.format(msg.from_user.first_name, f"@{bot_info.username}"),
-        reply_markup=InlineKeyboardMarkup(Data.buttons)
+        text=Data.START.format(msg.from_user.mention, me2),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                Data.generate_single_button,  # Start Generating Session button
+                [
+                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
+                ]
+            ]
+        ),
+        disable_web_page_preview=True,
     )
 
 # Help command
-@app.on_message(filters.command("help") & filters.private)
+@Client.on_message(filters.command("help") & filters.private)
 async def help_command(bot: Client, msg: Message):
     await msg.reply(
         text=Data.HELP,
@@ -99,7 +86,7 @@ async def help_command(bot: Client, msg: Message):
     )
 
 # About command
-@app.on_message(filters.command("about") & filters.private)
+@Client.on_message(filters.command("about") & filters.private)
 async def about_command(bot: Client, msg: Message):
     await msg.reply(
         text=Data.ABOUT,
@@ -107,7 +94,7 @@ async def about_command(bot: Client, msg: Message):
     )
 
 # Handle button callbacks
-@app.on_callback_query(filters.regex("generate"))
+@Client.on_callback_query(filters.regex("generate"))
 async def handle_generate_callback(bot: Client, query: CallbackQuery):
     await query.message.reply("Session generation process started...")
 
@@ -124,3 +111,4 @@ async def handle_about_callback(bot: Client, query: CallbackQuery):
         text=Data.ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
+
