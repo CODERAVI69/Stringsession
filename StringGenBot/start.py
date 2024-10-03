@@ -2,35 +2,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from config import OWNER_ID
 
-def filter(cmd: str):
-    return filters.private & filters.incoming & filters.command(cmd)
-
-@Client.on_message(filter("start"))
-async def start(bot: Client, msg: Message):
-    me2 = (await bot.get_me()).mention
-    await bot.send_message(
-        chat_id=msg.chat.id,
-        text=f"""Hᴇʏ {msg.from_user.mention}🦋,
-
-Tʜɪs ɪs {me2},
-Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
-ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
-
-Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ʙᴀʀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDEDKING8) !""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ", callback_data="generate")
-                ],
-                [
-                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
-                ]
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
-
 class Data:
     generate_single_button = [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
 
@@ -74,6 +45,36 @@ Language : [Python](https://www.python.org)
 Developer : @CoderEL
     """
 
+# Filter function for commands
+def filter(cmd: str):
+    return filters.private & filters.incoming & filters.command(cmd)
+
+# Start command
+@Client.on_message(filter("start"))
+async def start(bot: Client, msg: Message):
+    me2 = (await bot.get_me()).mention
+    await bot.send_message(
+        chat_id=msg.chat.id,
+        text=f"""Hᴇʏ {msg.from_user.mention}🦋,
+
+Tʜɪs ɪs {me2},
+Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
+ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
+
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ʙᴀʀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDEDKING8) !""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ", callback_data="generate")
+                ],
+                [
+                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
+                ]
+            ]
+        ),
+        disable_web_page_preview=True,
+    )
 
 # Help command
 @Client.on_message(filters.command("help") & filters.private)
@@ -96,17 +97,16 @@ async def about_command(bot: Client, msg: Message):
 async def handle_generate_callback(bot: Client, query: CallbackQuery):
     await query.message.reply("Session generation process started...")
 
-@app.on_callback_query(filters.regex("help"))
+@Client.on_callback_query(filters.regex("help"))
 async def handle_help_callback(bot: Client, query: CallbackQuery):
     await query.message.reply(
         text=Data.HELP,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
-@app.on_callback_query(filters.regex("about"))
+@Client.on_callback_query(filters.regex("about"))
 async def handle_about_callback(bot: Client, query: CallbackQuery):
     await query.message.reply(
         text=Data.ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
-
