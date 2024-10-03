@@ -27,11 +27,11 @@ class Data:
 HELP = """
 ✨ **Available Commands** ✨
 
-start - Start the Bot
-generate - Generate Session
-cancel - Cancel the process
-help - This Message
-about - About The Bot
+/start - Start the Bot
+/generate - Generate Session
+/cancel - Cancel the process
+/help - This Message
+/about - About The Bot
 
 For further assistance, feel free to reach out to the Developer!
 """
