@@ -15,7 +15,7 @@ class Data:
         [InlineKeyboardButton("ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ᴀɴᴅ ᴍᴏʀᴇ ʙᴏᴛꜱ", url="https://t.me/Helpdesk_Chatsbot")],
         [
             InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ❔", callback_data="help"),
-            InlineKeyboardButton("★彡[ᴀʙᴏᴜᴛ", callback_data="about")
+            InlineKeyboardButton("★彡[ᴀʙᴏᴜᴛ]彡★", callback_data="about")
         ],
         [
             InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
