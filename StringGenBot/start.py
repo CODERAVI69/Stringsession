@@ -43,12 +43,12 @@ Welcome to the **String Session Generator Bot**! 🎉
 
 This bot allows you to generate Pyrogram and Telethon string sessions easily.
 
-### Features:
+**Features:**
 - 🔥 **Fast and Efficient**: Generate sessions quickly.
 - 📚 **Open Source**: The source code is available for everyone to explore.
 - 🌐 **Multi-Platform**: Works seamlessly across different platforms.
 
-### Information:
+**Information:**
 - **Source Code**: [Click Here](https://github.com/techyshreyansh/STRING-SESSION)
 - **Framework**: [Pyrogram](https://docs.pyrogram.org)
 - **Language**: [Python](https://www.python.org)
