@@ -59,15 +59,15 @@ Atleast Give A Star and Fork The Repo 🖤
 
 ## 🗒️ Command To Add on Bot Father To Start For Bot
 
-☞ `start - Start the Bot`
+☞ `/start - Start the Bot`
 
-☞ `generate - Generate Session`
+☞ `/generate - Generate Session`
 
-☞ `cancel - Cancel the process`
+☞ `/cancel - Cancel the process`
 
-☞ `help - This Message`
+☞ `/help - This Message`
 
-☞ `about - About The Bot`
+☞ `/about - About The Bot`
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
