@@ -8,7 +8,7 @@ class Data:
     home_buttons = [
         generate_single_button,
         [InlineKeyboardButton(text="ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ", callback_data="home")],
-        [InlineKeyboardButton(text="Restart Bot", callback_data="restart")]  # Add Restart Button
+        [InlineKeyboardButton(text="Restart Bot", callback_data="restart")]  # This will now trigger the restart callback
     ]
 
     buttons = [
@@ -128,11 +128,12 @@ Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/
         disable_web_page_preview=True,
     )
 
-# Restart command
+# Restart command via callback
 @Client.on_callback_query(filters.regex("restart"))
 async def handle_restart_callback(bot: Client, query: CallbackQuery):
     await query.message.reply("🔄 Restarting the bot... Please wait...")
-    # Here, you could add any additional logic to reset the bot state if necessary.
+    await bot.stop()  # Stop the bot
+    await bot.start()  # Restart the bot
 
 # Run the bot
 if __name__ == "__main__":
