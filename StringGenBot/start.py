@@ -1,5 +1,35 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
+from config import OWNER_ID
+
+def filter(cmd: str):
+    return filters.private & filters.incoming & filters.command(cmd)
+
+@Client.on_message(filter("start"))
+async def start(bot: Client, msg: Message):
+    me2 = (await bot.get_me()).mention
+    await bot.send_message(
+        chat_id=msg.chat.id,
+        text=f"""Hᴇʏ {msg.from_user.mention}🦋,
+
+Tʜɪs ɪs {me2},
+Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
+ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
+
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ʙᴀʀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDEDKING8) !""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ", callback_data="generate")
+                ],
+                [
+                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
+                ]
+            ]
+        ),
+        disable_web_page_preview=True,
+    )
 
 class Data:
     generate_single_button = [InlineKeyboardButton("🔥 Start Generating Session 🔥", callback_data="generate")]
@@ -18,21 +48,6 @@ class Data:
         ],
         [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/ELUpdates")],
     ]
-
-    START = """
-Hey {},
-
-Welcome to {}
-
-If you don't trust this bot, 
-> Please stop reading this message
-> Delete this chat
-
-Still reading?
-You can use me to generate Pyrogram (even version 2) and Telethon string sessions. Use the buttons below to learn more!
-
-By @ELUpdates
-    """
 
     HELP = """
 ✨ **Available Commands** ✨
@@ -59,23 +74,6 @@ Language : [Python](https://www.python.org)
 Developer : @CoderEL
     """
 
-# Start command using the Data class
-@Client.on_message(filters.command("start") & filters.private)
-async def start(bot: Client, msg: Message):
-    me2 = (await bot.get_me()).mention
-    await msg.reply(
-        text=Data.START.format(msg.from_user.mention, me2),
-        reply_markup=InlineKeyboardMarkup(
-            [
-                Data.generate_single_button,  # Start Generating Session button
-                [
-                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
-                ]
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
 
 # Help command
 @Client.on_message(filters.command("help") & filters.private)
