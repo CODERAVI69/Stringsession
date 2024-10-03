@@ -69,11 +69,20 @@ Developer : @CoderEL
     """
 
 # Initialize Pyrogram Client
+logging.basicConfig(
+    level=logging.WARNING, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
+logging.getLogger("pymongo").setLevel(logging.ERROR)
+
+StartTime = time.time()
 app = Client(
-    "my_bot",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
+    "Anonymous",
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    bot_token=config.BOT_TOKEN,
+    in_memory=True,
+    plugins=dict(root="StringGenBot"),
 )
 
 # Must Join feature
