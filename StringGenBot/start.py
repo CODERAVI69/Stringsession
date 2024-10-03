@@ -16,17 +16,17 @@ async def start(bot: Client, msg: Message):
 
 Tʜɪs ɪs {me2},
 Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
-ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
+ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
-Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ʙᴀʀɴᴅᴇᴅ ᴋɪɴɢ](https://t.me/BRANDEDKING8) !""",
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://t.me/Helpdesk_chatsbot) !""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
+                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
+                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
                 ]
             ]
         ),
