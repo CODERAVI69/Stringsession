@@ -7,7 +7,8 @@ class Data:
     
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ", callback_data="home")]
+        [InlineKeyboardButton(text="ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ", callback_data="home")],
+        [InlineKeyboardButton(text="Restart Bot", callback_data="restart")]  # Add Restart Button
     ]
 
     buttons = [
@@ -17,10 +18,11 @@ class Data:
             InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ❔", callback_data="help"),
             InlineKeyboardButton("★彡[ᴀʙᴏᴜᴛ", callback_data="about")
         ],
-        [InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
-         InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")],
+        [
+            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
+            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
+        ],
         [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/Tech_Shreyansh2")],
-        [InlineKeyboardButton("ꜱᴇɴᴅ ꜰᴇᴇᴅʙᴀᴄᴋ 📩", callback_data="feedback")]
     ]
 
 HELP = """
@@ -31,8 +33,7 @@ HELP = """
 /start - Start the Bot
 /generate - Generate Session
 /cancel - Cancel the process
-/restart - Cancel the process
-/feedback - Provide your feedback
+/restart - Restart the Bot
 
 For further assistance, feel free to reach out to the Developer!
 """
@@ -56,8 +57,6 @@ This bot allows you to generate Pyrogram and Telethon string sessions easily.
 - **Developer**: [@ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot)
 """
 
-user_statistics = {}
-
 # Filter function for commands
 def filter(cmd: str):
     return filters.private & filters.incoming & filters.command(cmd)
@@ -66,8 +65,6 @@ def filter(cmd: str):
 @Client.on_message(filter("start"))
 async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
-    user_id = msg.from_user.id
-    user_statistics[user_id] = user_statistics.get(user_id, 0) + 1  # Track user interactions
     await bot.send_message(
         chat_id=msg.chat.id,
         text=f"""Hᴇʏ {msg.from_user.mention}🦋,
@@ -77,7 +74,7 @@ Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏ
 ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
 Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot) !""",
-        reply_markup=InlineKeyboardMarkup(Data.buttons),
+        reply_markup=InlineKeyboardMarkup(Data.buttons),  # Use the full set of buttons
         disable_web_page_preview=True,
     )
 
@@ -96,11 +93,6 @@ async def about_command(bot: Client, msg: Message):
         text=ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
-
-# Feedback command
-@Client.on_message(filters.command("feedback") & filters.private)
-async def feedback_command(bot: Client, msg: Message):
-    await msg.reply("Please send your feedback or suggestions below:")
 
 # Handle button callbacks
 @Client.on_callback_query(filters.regex("generate"))
@@ -132,9 +124,15 @@ Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏ
 ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
 Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot) !""",
-        reply_markup=InlineKeyboardMarkup(Data.buttons),
+        reply_markup=InlineKeyboardMarkup(Data.buttons),  # Return to the main menu
         disable_web_page_preview=True,
     )
+
+# Restart command
+@Client.on_callback_query(filters.regex("restart"))
+async def handle_restart_callback(bot: Client, query: CallbackQuery):
+    await query.message.reply("🔄 Restarting the bot... Please wait...")
+    # Here, you could add any additional logic to reset the bot state if necessary.
 
 # Run the bot
 if __name__ == "__main__":
