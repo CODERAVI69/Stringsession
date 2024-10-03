@@ -24,7 +24,7 @@ class Data:
         [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/Tech_Shreyansh2")],
     ]
 
-    HELP = """
+HELP = """
 ✨ **Available Commands** ✨
 
 /about - About The Bot
@@ -33,21 +33,28 @@ class Data:
 /generate - Generate Session
 /cancel - Cancel the process
 /restart - Cancel the process
-    """
 
-    ABOUT = """
-**About This Bot** 
+For further assistance, feel free to reach out to the Developer!
+"""
 
-Telegram Bot to Generate Pyrogram and Telethon string session by @ʜᴇʟᴘᴅᴇꜱᴋ_ᴄʜᴀᴛꜱʙᴏᴛ
+ABOUT = """
+**🤖 About This Bot** 
 
-Source Code : [Click Here](https://github.com/techyshreyansh/STRING-SESSION)
+Welcome to the **String Session Generator Bot**! 🎉
 
-Framework : [Pyrogram](https://docs.pyrogram.org)
+This bot allows you to generate Pyrogram and Telethon string sessions easily.
 
-Language : [Python](https://www.python.org)
+### Features:
+- 🔥 **Fast and Efficient**: Generate sessions quickly.
+- 📚 **Open Source**: The source code is available for everyone to explore.
+- 🌐 **Multi-Platform**: Works seamlessly across different platforms.
 
-Developer : [@ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot)
-    """
+### Information:
+- **Source Code**: [Click Here](https://github.com/techyshreyansh/STRING-SESSION)
+- **Framework**: [Pyrogram](https://docs.pyrogram.org)
+- **Language**: [Python](https://www.python.org)
+- **Developer**: [@ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot)
+"""
 
 # Filter function for commands
 def filter(cmd: str):
@@ -57,10 +64,9 @@ def filter(cmd: str):
 @Client.on_message(filter("start"))
 async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
-    await bot.send_photo(
+    await bot.send_message(
         chat_id=msg.chat.id,
-        photo="https://envs.sh/WUN.jpg",  # Replace with your image URL
-        caption=f"""Hᴇʏ {msg.from_user.mention}🦋,
+        text=f"""Hᴇʏ {msg.from_user.mention}🦋,
 
 Tʜɪs ɪs {me2},
 Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
@@ -75,7 +81,7 @@ Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/
 @Client.on_message(filters.command("help") & filters.private)
 async def help_command(bot: Client, msg: Message):
     await msg.reply(
-        text=Data.HELP,
+        text=HELP,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
@@ -83,7 +89,7 @@ async def help_command(bot: Client, msg: Message):
 @Client.on_message(filters.command("about") & filters.private)
 async def about_command(bot: Client, msg: Message):
     await msg.reply(
-        text=Data.ABOUT,
+        text=ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
@@ -95,31 +101,29 @@ async def handle_generate_callback(bot: Client, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("help"))
 async def handle_help_callback(bot: Client, query: CallbackQuery):
     await query.message.reply(
-        text=Data.HELP,
+        text=HELP,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
 @Client.on_callback_query(filters.regex("about"))
 async def handle_about_callback(bot: Client, query: CallbackQuery):
     await query.message.reply(
-        text=Data.ABOUT,
+        text=ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
-# Handle Home button callback
+# Handle home button callback
 @Client.on_callback_query(filters.regex("home"))
 async def handle_home_callback(bot: Client, query: CallbackQuery):
-    # Recreate the welcome message for the home menu
     me2 = (await bot.get_me()).mention
-    await query.message.reply_photo(
-        photo="https://envs.sh/WUN.jpg",  # Replace with your image URL
-        caption=f"""Hᴇʏ {query.from_user.mention}🦋,
+    await query.message.reply(
+        text=f"""Hᴇʏ {query.from_user.mention}🦋,
 
 Tʜɪs ɪs {me2},
 Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
 ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
 Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot) !""",
-        reply_markup=InlineKeyboardMarkup(Data.buttons),  # Display the full set of buttons
+        reply_markup=InlineKeyboardMarkup(Data.buttons),  # Return to the main menu
         disable_web_page_preview=True,
     )
