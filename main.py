@@ -21,6 +21,43 @@ app = Client(
     plugins=dict(root="StringGenBot"),
 )
 
+# Function to check if user has joined MUST_JOIN group or channel
+@app.on_message(filters.private, group=-1)  # Apply to private messages
+async def must_join_channel(bot: Client, msg: Message):
+    if not MUST_JOIN:
+        return  # If MUST_JOIN is not set, skip the check
+    
+    try:
+        # Check if the user is a member of the group/channel
+        try:
+            await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
+        except UserNotParticipant:
+            # Generate invite link for the group/channel
+            if MUST_JOIN.isalpha():
+                link = "https://t.me/" + MUST_JOIN
+            else:
+                chat_info = await bot.get_chat(MUST_JOIN)
+                link = chat_info.invite_link
+
+            # Send a message with a button to join the group
+            try:
+                await msg.reply_photo(
+                    photo="https://envs.sh/WUN.jpg",
+                    caption=f"» First, you need to join our channel [𝐉𝐎𝐈𝐍]({link}) before using this bot!",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [InlineKeyboardButton("Join", url=link)],
+                        ]
+                    )
+                )
+                await msg.stop_propagation()  # Stop further message processing until the user joins
+            except ChatWriteForbidden:
+                pass  # Can't write in the chat, skip
+
+    except ChatAdminRequired:
+        print(f"Please promote the bot as an admin in the MUST_JOIN chat: {MUST_JOIN}")
+
+# Can't write in the chat, skip
 
 if __name__ == "__main__":
     print("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐒𝐭𝐫𝐢𝐧𝐠 𝐁𝐨𝐭...")
