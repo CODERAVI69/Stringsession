@@ -95,11 +95,7 @@ async def must_join_channel(bot: Client, msg: Message):
         try:
             await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
         except UserNotParticipant:
-            if MUST_JOIN.isalpha():
-                link = "https://t.me/" + MUST_JOIN
-            else:
-                chat_info = await bot.get_chat(MUST_JOIN)
-                link = chat_info.invite_link
+            link = f"https://t.me/{MUST_JOIN}" if MUST_JOIN.isalpha() else (await bot.get_chat(MUST_JOIN)).invite_link
             await msg.reply_photo(
                 photo="https://envs.sh/WUN.jpg",
                 caption=f"» Please join our channel first [𝐉𝐎𝐈𝐍]({link}) and then start me again!",
@@ -114,8 +110,9 @@ async def must_join_channel(bot: Client, msg: Message):
 # Start command
 @app.on_message(filters.command("start") & filters.private)
 async def start_command(bot: Client, msg: Message):
+    bot_info = await bot.get_me()  # Get bot info
     await msg.reply(
-        text=Data.START.format(msg.from_user.first_name, bot.mention),
+        text=Data.START.format(msg.from_user.first_name, f"@{bot_info.username}"),
         reply_markup=InlineKeyboardMarkup(Data.buttons)
     )
 
@@ -160,12 +157,13 @@ if __name__ == "__main__":
     try:
         app.start()
     except (ApiIdInvalid, ApiIdPublishedFlood):
-        raise Exception("Your API_ID/API_HASH is not valid.")
+        raise Exception("Your API_ID or API_HASH is not valid.")
     except AccessTokenInvalid:
         raise Exception("Your BOT_TOKEN is not valid.")
-    uname = app.get_me().username
-    print(f"@{uname} 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘. 𝐌𝐀𝐃𝐄 𝐁𝐘 @𝙏𝙀𝘾𝙃 𝙎𝙃𝙍𝙀𝙔𝘼𝙉𝙎𝙃🤗")
+    
+    bot_info = app.get_me()
+    print(f"@{bot_info.username} 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘. 𝐌𝐀𝐃𝐄 𝐁𝐘 @𝙏𝙀𝘾𝙃 𝙎𝙃𝙍𝙀𝙔𝘼𝙉𝙎𝙃🤗")
+    
     idle()
     app.stop()
-    print("𝗕𝗢𝗧 𝗦𝗧𝗢𝗣𝗣𝗘𝗗 𝗕𝗬 𝗕𝗬 !")
-
+    print("𝗕𝗢𝗧 𝗦𝗧𝗢𝗣𝗣𝗘𝗗 𝗕𝗬𝗘 𝗕𝗬𝗘 !")
