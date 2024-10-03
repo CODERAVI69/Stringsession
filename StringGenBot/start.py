@@ -13,17 +13,16 @@ class Data:
     buttons = [
         generate_single_button,
         [InlineKeyboardButton("✨ Bot Status and More Bots ✨", url="https://t.me/ELUpdates/8")],
-        
         [
             InlineKeyboardButton("How to Use ❔", callback_data="help"),
             InlineKeyboardButton("🎪 About 🎪", callback_data="about")
         ],
+        [
+            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
+            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
+        ],
         [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/ELUpdates")],
     ]
-     [
-                    InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/BRANDED_PAID_CC"),
-                    InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/BRANDRD_BOT")
-                ]
 
     HELP = """
 ✨ **Available Commands** ✨
@@ -105,3 +104,8 @@ async def handle_about_callback(bot: Client, query: CallbackQuery):
         text=Data.ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
+
+# Handle Home button callback
+@Client.on_callback_query(filters.regex("home"))
+async def handle_home_callback(bot: Client, query: CallbackQuery):
+    await start(bot, query.message)  # Call the start function to display the home menu again
