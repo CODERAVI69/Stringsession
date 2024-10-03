@@ -55,6 +55,17 @@ Atleast Give A Star and Fork The Repo 🖤
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
+## 🗒️ Command To Add on Bot Father To Start For Bot
+
+☞ ```start - Start the Bot```
+☞ ```generate - Generate Session```
+☞ ```cancel - Cancel the process```
+☞ ```help - This Message```
+☞ ```about - About The Bot```
+
+
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ## 💖 ᴄʀᴇᴅɪᴛs
 - » [@TECH SHREYANSH](https://github.com/techyshreyansh?tab=repositories)
