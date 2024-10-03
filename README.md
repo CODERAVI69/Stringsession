@@ -36,7 +36,7 @@
 
 ### 🚀 ᴅᴇᴘʟᴏʏ ᴛᴏ KOYEB
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=string-session&type=git&repository=techyshreyansh)
+<p align="center"><a href="https://app.koyeb.com/deploy?name=string-session&type=git&repository=techyshreyan"><img src="https://www.koyeb.com/static/images/deploy/button.svg" width="220" height="38.45"/></a></p>
 
 ### 🙄 ᴅᴇᴍᴏ/ᴛᴇsᴛ ʙᴏᴛ
   
