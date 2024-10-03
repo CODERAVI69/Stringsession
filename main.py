@@ -1,24 +1,26 @@
-import config
-import time
-import logging
-from pyrogram import Client, idle
-from pyromod import listen  # type: ignore
-from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
+from os import getenv
+from dotenv import load_dotenv
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
-logging.basicConfig(
-    level=logging.WARNING, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
+# Load environment variables
+load_dotenv()
 
-logging.getLogger("pymongo").setLevel(logging.ERROR)
+# Environment variables (API_ID, API_HASH, BOT_TOKEN, OWNER_ID, MUST_JOIN)
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
+BOT_TOKEN = getenv("BOT_TOKEN")
+OWNER_ID = int(getenv("OWNER_ID"))
+MONGO_DB_URI = getenv("MONGO_DB_URI")
+MUST_JOIN = getenv("MUST_JOIN", None)
 
-StartTime = time.time()
+# Initialize Pyrogram Client
 app = Client(
-    "Anonymous",
-    api_id=config.API_ID,
-    api_hash=config.API_HASH,
-    bot_token=config.BOT_TOKEN,
-    in_memory=True,
-    plugins=dict(root="StringGenBot"),
+    "my_bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
 )
 
 # Function to check if user has joined MUST_JOIN group or channel
@@ -57,18 +59,12 @@ async def must_join_channel(bot: Client, msg: Message):
     except ChatAdminRequired:
         print(f"Please promote the bot as an admin in the MUST_JOIN chat: {MUST_JOIN}")
 
-# Can't write in the chat, skip
+# Start command after joining group
+@app.on_message(filters.command("start") & filters.private)
+async def start_command(bot: Client, msg: Message):
+    await msg.reply_text(f"Hello, {msg.from_user.first_name}! Welcome to the bot.")
 
+# Running the bot
 if __name__ == "__main__":
-    print("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐒𝐭𝐫𝐢𝐧𝐠 𝐁𝐨𝐭...")
-    try:
-        app.start()
-    except (ApiIdInvalid, ApiIdPublishedFlood):
-        raise Exception("Your API_ID/API_HASH is not valid.")
-    except AccessTokenInvalid:
-        raise Exception("Your BOT_TOKEN is not valid.")
-    uname = app.get_me().username
-    print(f"@{uname} 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘. 𝐌𝐀𝐃𝐄 𝐁𝐘 @𝙏𝙀𝘾𝙃 𝙎𝙃𝙍𝙀𝙔𝘼𝙉𝙎𝙃🤗")
-    idle()
-    app.stop()
-    print("𝗕𝗢𝗧 𝗦𝗧𝗢𝗣𝗣𝗘𝗗 𝗕𝗬 𝗕𝗬 !")
+    print("Bot is running...")
+    app.run()
