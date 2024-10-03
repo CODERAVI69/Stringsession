@@ -4,11 +4,10 @@ from config import OWNER_ID
 
 class Data:
     generate_single_button = [InlineKeyboardButton("★彡[ꜱᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ꜱᴇꜱꜱɪᴏɴ]彡★", callback_data="generate")]
-    
+
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ", callback_data="home")],
-        [InlineKeyboardButton(text="Restart Bot", callback_data="restart")]  # This will now trigger the restart callback
+        [InlineKeyboardButton(text="ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ", callback_data="home")]
     ]
 
     buttons = [
@@ -28,12 +27,11 @@ class Data:
 HELP = """
 ✨ **Available Commands** ✨
 
-/about - About The Bot
-/help - This Message
-/start - Start the Bot
-/generate - Generate Session
-/cancel - Cancel the process
-/restart - Restart the Bot
+start - Start the Bot
+generate - Generate Session
+cancel - Cancel the process
+help - This Message
+about - About The Bot
 
 For further assistance, feel free to reach out to the Developer!
 """
@@ -113,6 +111,7 @@ async def handle_about_callback(bot: Client, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
 
+# Handle home button callback
 @Client.on_callback_query(filters.regex("home"))
 async def handle_home_callback(bot: Client, query: CallbackQuery):
     me2 = (await bot.get_me()).mention
@@ -127,14 +126,3 @@ Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/
         reply_markup=InlineKeyboardMarkup(Data.buttons),  # Return to the main menu
         disable_web_page_preview=True,
     )
-
-# Restart command via callback
-@Client.on_callback_query(filters.regex("restart"))
-async def handle_restart_callback(bot: Client, query: CallbackQuery):
-    await query.message.reply("🔄 Restarting the bot... Please wait...")
-    await bot.stop()  # Stop the bot
-    await bot.start()  # Restart the bot
-
-# Run the bot
-if __name__ == "__main__":
-    Client("my_bot").run()
