@@ -16,6 +16,8 @@
 
 [![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork/)
 
+- [Forks](https://github.com/techyshreyansh/STRING-SESSION/fork/) version observance: ![semver](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
+
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
