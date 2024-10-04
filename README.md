@@ -10,11 +10,11 @@
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-- Website: <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh"></a>
+- Website ☞ <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh"></a>
 
-- [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://telegram.me.Helpdesk_Chatsbot): ![followers](https://img.shields.io/github/followers/techyshreyansh?style=social)
+- [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://telegram.me.Helpdesk_Chatsbot) ☞ ![followers](https://img.shields.io/github/followers/techyshreyansh?style=social)
 
-- Forks: [forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
+- Forks ☞ [forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
