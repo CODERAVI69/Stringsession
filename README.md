@@ -3,17 +3,19 @@
   <img src="https://envs.sh/WUN.jpg" alt="StringGen">
 </p>
 ## ʀᴇᴘᴏ sᴛᴀᴛs
-<a href="https://github.com/techyshreyansh/STRING-SESSION"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WCGKING&repo=STRING-SESSION&theme=chartreuse-dark"></a>
+<a href="https://github.com/techyshreyansh/STRING-SESSION"><img src="https://github-readme-stats.vercel.app/api/pin/?username=techyshreyansh&repo=STRING-SESSION&theme=chartreuse-dark"></a>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-[![Website]<a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh%2FSTRING-SESSION"></a>
+<a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh%2FSTRING-SESSION"></a>
  
 [![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://img.shields.io/github/repo-size/techyshreyansh/STRING-SESSION)](https://github.com/techyshreyansh/STRING-SESSION)
-  [![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION)](https://github.com/techyshreyansh/STRING-SESSION/fork)
+[![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION)](https://github.com/techyshreyansh/STRING-SESSION/fork)
+
+Most recent fork: **LATEST_FORK_USER**
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
