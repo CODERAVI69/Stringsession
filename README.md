@@ -67,6 +67,33 @@ Atleast Give A Star and Fork The Repo 🖤
 /about - About The Bot
 ```
 
+## 🍨 Add About on Your Bot
+
+1. Go to Bot Father.
+2. Now Tap on My Bots.
+3. Select ur Bot.
+4. Now Choose Edit Bot.
+5. Select Edit About Section.
+6. Now Add This About Section.
+
+```
+𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚 𝙋𝙮𝙧𝙤𝙜𝙧𝙖𝙢 𝙎𝙩𝙧𝙞𝙣𝙜 𝙎𝙚𝙨𝙨𝙞𝙤𝙣 𝙁𝙤𝙧 𝙔𝙤𝙪𝙧 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝘼𝙘𝙘𝙤𝙪𝙣𝙩 :)
+𝘿𝙚𝙥𝙡𝙤𝙮𝙚𝙙 𝘽𝙮 @𝙃𝙚𝙡𝙥𝙙𝙚𝙨𝙠_𝘾𝙝𝙖𝙩𝙨𝙗𝙤𝙩 🫣
+```
+
+## 🍨 Add Description on Your Bot
+
+1. Go to Bot Father.
+2. Now Tap on My Bots.
+3. Select ur Bot.
+4. Now Choose Edit Bot.
+5. Select Edit Description Section.
+6. Now Add This Description Section.
+
+```
+★彡[ᴛʜɪꜱ ʙᴏʏ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴛᴇʟᴇᴛʜᴏɴ ᴀɴᴅ ᴘʀᴏɢʀᴀᴍ ꜱᴛʀɪɴɢ ꜱᴇꜱꜱɪᴏɴ @ʜᴇʟᴘᴅᴇꜱᴋ_ᴄʜᴀᴛꜱʙᴏᴛ]彡★
+```
+
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ## 💖 ᴄʀᴇᴅɪᴛs
