@@ -10,7 +10,7 @@
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-  <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh%2FSTRING-SESSION"></a>
+[![Website]<a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh%2FSTRING-SESSION"></a>
  
 [![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://img.shields.io/github/repo-size/techyshreyansh/STRING-SESSION)](https://github.com/techyshreyansh/STRING-SESSION)
   [![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION)](https://github.com/techyshreyansh/STRING-SESSION/fork)
