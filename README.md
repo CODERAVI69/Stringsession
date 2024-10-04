@@ -10,7 +10,7 @@
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-- Website: [website](https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh)
+- Website: <a href="https://telegram.me/tech_shreyansh2"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh"></a>
 
 - [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://telegram.me.Helpdesk_Chatsbot): ![semver](https://img.shields.io/github/followers/techyshreyansh?style=social)
 
