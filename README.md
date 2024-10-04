@@ -14,7 +14,7 @@
  
 [![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](#?style=social)](https://github.com/techyshreyansh/STRING-SESSION/)
 
-[![Forks](https://img.shields.io/github/forks/WCGKING/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork/)
+[![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork/)
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
