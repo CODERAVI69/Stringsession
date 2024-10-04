@@ -16,7 +16,7 @@
 
 [![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork/)
 
-- [Forks](https://github.com/techyshreyansh/STRING-SESSION/fork/) ![forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
+- [Forks] ![forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
