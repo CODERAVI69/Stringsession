@@ -10,9 +10,9 @@
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-  <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/badge/𝗕𝗥𝗔𝗡𝗗𝗘𝗗 𓆩🇽𓆪 𝗞𝗜𝗡𝗚"></a>
+  <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://envs.sh/Wsj.png"></a>
  
-[![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://img.shields.io/github.com/WCGKING/STRING-SESSION?style=social)](https://github.com/WCGKING/STRING-SESSION/stargazers)
+[![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://envs.sh/Wsc.png)](https://github.com/techyshreyansh/STRING-SESSION)
   [![Forks](https://img.shields.io/github/forks/WCGKING/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork)
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
