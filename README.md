@@ -10,9 +10,9 @@
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-<a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website"></a>
- 
-[![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](#?style=social)](https://github.com/techyshreyansh/STRING-SESSION/)
+<a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh"></a>
+
+[![ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://img.shields.io/github/followers/techyshreyansh?style=social)](https://github.com/techyshreyansh/STRING-SESSION/)
 
 [![Forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)](https://github.com/techyshreyansh/STRING-SESSION/fork/)
 
