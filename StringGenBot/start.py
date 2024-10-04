@@ -18,10 +18,10 @@ class Data:
             InlineKeyboardButton("★彡[ᴀʙᴏᴜᴛ]彡★", callback_data="about")
         ],
         [
-            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tech_Shreyansh"),
-            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tech_Shreyansh2")
+            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/TechInsightsWithShreyansh"),
+            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Helpdesk_Chatsbot")
         ],
-        [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/Tech_Shreyansh2")],
+        [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/TechInsightsWithShreyansh")],
     ]
 
 HELP = """
