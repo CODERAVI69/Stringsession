@@ -1,20 +1,20 @@
-<h1 align="center"><b>★彡[@ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ ꜱᴛʀɪɴɢ ꜱᴇꜱꜱɪᴏɴ ʙᴏᴛ]彡★</b></h1>
+<h1 align="center"><b>★彡[SESSION GENERATOR BOT BY CODER AVI]彡★</b></h1>
 <p align="center">
   <img src="https://envs.sh/WUN.jpg" alt="StringGen">
 </p>
 ## ʀᴇᴘᴏ sᴛᴀᴛs
-<a href="https://github.com/techyshreyansh/STRING-SESSION"><img src="https://github-readme-stats.vercel.app/api/pin/?username=techyshreyansh&repo=STRING-SESSION&theme=chartreuse-dark"></a>
+<a href="https://github.com/coderavi69/STRING-SESSION"><img src="https://github-readme-stats.vercel.app/api/pin/?username=coderavi69&repo=STRING-SESSION&theme=chartreuse-dark"></a>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 
 ### 🥵 sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ
-- Website ☞ <a href="https://github.com/techyshreyansh"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Ftechyshreyansh"></a>
+- Website ☞ <a href="https://github.com/coderavi69"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Fcoderavi69"></a>
 
-- [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://telegram.me.Helpdesk_Chatsbot) ☞ ![followers](https://img.shields.io/github/followers/techyshreyansh?style=social)
+- [ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://telegram.me.itsavibio) ☞ ![followers](https://img.shields.io/github/followers/coderavi69?style=social)
 
-- Forks ☞ [forks](https://img.shields.io/github/forks/techyshreyansh/STRING-SESSION?style=social)
+- Forks ☞ [forks](https://img.shields.io/github/forks/coderavi69/STRINGSESSION?style=social)
 
 ### 🛠️ ʟᴀɴɢᴜᴀɢᴇs ᴀɴᴅ ᴛᴏᴏʟs
 
@@ -33,11 +33,11 @@
 
 ### 🚀 ᴅᴇᴘʟᴏʏ ᴛᴏ ʜᴇʀᴏᴋᴜ
   
-  <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/techyshreyansh/STRING-SESSION"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+  <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/coderavi69/STRINGSESSION"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 ### 🚀 ᴅᴇᴘʟᴏʏ ᴛᴏ KOYEB
 
-<p align="center"><a href="https://app.koyeb.com/deploy?name=string-session&type=git&repository=techyshreyan"><img src="https://www.koyeb.com/static/images/deploy/button.svg" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://app.koyeb.com/deploy?name=stringsession&type=git&repository=coderavi69"><img src="https://www.koyeb.com/static/images/deploy/button.svg" width="220" height="38.45"/></a></p>
 
 ### 🙄 ᴅᴇᴍᴏ/ᴛᴇsᴛ ʙᴏᴛ
   
@@ -98,4 +98,4 @@ Atleast Give A Star and Fork The Repo 🖤
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ## 💖 ᴄʀᴇᴅɪᴛs
-- » [@TECH SHREYANSH](https://github.com/techyshreyansh?tab=repositories)
+- » [@CODERAVI69](https://github.com/coderavi69?tab=repositories)
