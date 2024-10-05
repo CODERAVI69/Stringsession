@@ -12,16 +12,16 @@ class Data:
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ᴀɴᴅ ᴍᴏʀᴇ ʙᴏᴛꜱ", url="https://t.me/Helpdesk_Chatsbot")],
+        [InlineKeyboardButton("ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ᴀɴᴅ ᴍᴏʀᴇ ʙᴏᴛꜱ", url="https://t.me/Tcn_Bots")],
         [
             InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ❔", callback_data="help"),
             InlineKeyboardButton("★彡[ᴀʙᴏᴜᴛ]彡★", callback_data="about")
         ],
         [
-            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/TechInsightsWithShreyansh"),
-            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Helpdesk_Chatsbot")
+            InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://t.me/Tcn_Bots"),
+            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/Tcn_Bots")
         ],
-        [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/TechInsightsWithShreyansh")],
+        [InlineKeyboardButton("ᴍᴏʀᴇ ᴀᴍᴀᴢɪɴɢ ʙᴏᴛꜱ", url="https://t.me/Tcn_Bots")],
     ]
 
 HELP = """
@@ -49,10 +49,10 @@ This bot allows you to generate Pyrogram and Telethon string sessions easily.
 - 🌐 **Multi-Platform**: Works seamlessly across different platforms.
 
 **Information:**
-- **Source Code**: [Click Here](https://github.com/techyshreyansh/STRING-SESSION)
+- **Source Code**: [Click Here](https://github.com/Coderavi69/STRINGSESSION)
 - **Framework**: [Pyrogram](https://docs.pyrogram.org)
 - **Language**: [Python](https://www.python.org)
-- **Developer**: [@ᴛᴇᴄʜ ꜱʜʀᴇʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot)
+- **Developer**: [CODER AVI](https://t.me/itsavibio)
 """
 
 # Filter function for commands
@@ -71,7 +71,7 @@ Tʜɪs ɪs {me2},
 Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
 ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
-Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot) !""",
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/C0derAvi) !""",
         reply_markup=InlineKeyboardMarkup(Data.buttons),  # Use the full set of buttons
         disable_web_page_preview=True,
     )
@@ -122,7 +122,7 @@ Tʜɪs ɪs {me2},
 Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
 ᴊɪsᴋᴇ ᴊᴀɪʙ ᴍᴇ ɢᴀɴᴅʜɪ  ᴄʜᴏʀɪ ᴜsᴋᴇ ᴘʏᴀᴀʀ ᴍᴇ ᴀᴀɴᴅʜɪ 🖤.
 
-Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/Helpdesk_Chatsbot) !""",
+Mᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ : [ᴛᴇᴄʜ ꜱʜʀʏᴀɴꜱʜ](https://t.me/C0derAvi) !""",
         reply_markup=InlineKeyboardMarkup(Data.buttons),  # Return to the main menu
         disable_web_page_preview=True,
     )
