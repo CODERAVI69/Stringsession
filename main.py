@@ -34,7 +34,7 @@ if __name__ == "__main__":
         raise Exception("Your BOT_TOKEN is not valid.")
     
     bot_info = app.get_me()
-    print(f"@{bot_info.username} 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘. 𝐌𝐀𝐃𝐄 𝐁𝐘 @𝙏𝙀𝘾𝙃 𝙎𝙃𝙍𝙀𝙔𝘼𝙉𝙎𝙃🤗")
+    print(f"@{bot_info.username} 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘. 𝐌𝐀𝐃𝐄 𝐁𝐘 @C0DERAVI🤗")
     
     idle()
     app.stop()
